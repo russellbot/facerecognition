@@ -82,12 +82,22 @@ class App extends Component {
     app.models
       .predict(
         Clarifai.FACE_DETECT_MODEL,
-        // URL
-        this.state.input
-        )
-        .then(response => this.displayFaceBox(this.calculateFaceLocation(response)))
+        this.state.input)
+        .then(response => {
+          if (response) {
+          fetch('http://localhost:3000/image', {
+            method: 'put',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+              id: this.state.user.id
+            })
+          })  
+
+        }
+        this.displayFaceBox(this.calculateFaceLocation(response))
         .catch(err => console.log(err));
-  }
+        }  
+    
 
   onRouteChange = (route) => {
     if (route === 'signout') {
