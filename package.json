@@ -1,5 +1,5 @@
 {
-  "name": "facerecognition",
+  "name": "smart-face",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,7 +10,7 @@
     "cors": "^2.8.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-particles-js": "^3.2.1",
+    "react-particles-js": "^3.3.0",
     "react-scripts": "^3.4.3",
     "react-tilt": "^0.1.4",
     "serve": "^11.3.2",
