@@ -1,7 +1,7 @@
 import React from 'react';
 import './Profile.css';
 
-const Profile = ({ isProfileOpen, toggleModal }) => {
+const Profile = ({ isProfileOpen, toggleModal, user }) => {
     return (
         <div className="profile-modal">
             <article className="br3 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center bg-white">
@@ -9,14 +9,14 @@ const Profile = ({ isProfileOpen, toggleModal }) => {
                     <img
                         src="http://tachyons.io/img/logo.jpg"
                         className="br-100 ba h3 w3 dib" alt="avatar" /> 
-                    <h1>John Doe</h1>
-                    <h4>Images Submitted: 5</h4>
-                    <p>Member Since: January</p>
+                    <h1>{user.name}</h1>
+                    <h4>{`Images Submitted: ${user.entries}`}</h4>
+                    <p>{`Member Since: ${new Date(user.joined).toLocaleDateString()}`}</p>
                     <hr />       
                     <label className="mt2 fw6" htmlFor="user-name">Name:</label>
                     <input 
                         className="pa2 ba w-100" 
-                        placeholder="John"
+                        placeholder={user.name}
                         type="text" 
                         name="name"  
                         id="name"  
@@ -24,7 +24,7 @@ const Profile = ({ isProfileOpen, toggleModal }) => {
                     <label className="mt2 fw6" htmlFor="user-name">Age:</label> 
                     <input 
                         className="pa2 ba w-100" 
-                        placeholder="56"
+                        placeholder={user.age}
                         type="text" 
                         name="user-age"  
                         id="pet"  
@@ -32,7 +32,7 @@ const Profile = ({ isProfileOpen, toggleModal }) => {
                     <label className="mt2 fw6" htmlFor="user-name">Pet:</label> 
                     <input 
                         className="pa2 ba w-100" 
-                        placeholder="dragon"
+                        placeholder={user.pet}
                         type="text" 
                         name="user-pet"  
                         id="pet"  
