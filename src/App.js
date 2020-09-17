@@ -159,14 +159,7 @@ class App extends Component {
 
   onRouteChange = (route) => {
     if (route === 'signout') {
-      fetch(`http://localhost:3000/profile/${data.userId}`, {
-        method: 'get',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': ''
-        }
-      }).then(this.setState(initialState))
-      
+      return this.setState(initialState);
     } else if (route === 'home') {
       this.setState({isSignedIn: true});
     }
