@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Particles from 'react-particles-js';
+// import Particles from 'react-particles-js';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition.js';
 import Navigation from './components/Navigation/Navigation.js';
 import Signin from './components/Signin/Signin.js'
@@ -11,17 +11,17 @@ import Modal from './components/Modal/Modal.js'
 import Profile from './components/Profile/Profile.js'
 import './App.css';
 
-const particlesOptions = {
-  particles: {
-    number: {
-      value: 90,
-      density: {
-        enable: true,
-        value_area: 800
-      }
-    }
-  }
-}
+// const particlesOptions = {
+//   particles: {
+//     number: {
+//       value: 90,
+//       density: {
+//         enable: true,
+//         value_area: 800
+//       }
+//     }
+//   }
+// }
 
 const initialState = {
   input: '',
@@ -182,9 +182,9 @@ class App extends Component {
     const { isSignedIn, imageUrl, route, boxes, isProfileOpen, user } = this.state;
     return (
       <div className="App">
-        <Particles className='particles'
+        {/* <Particles className='particles'
           params={particlesOptions} 
-        />
+        /> */}
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}
           toggleModal={this.toggleModal} />
         { isProfileOpen && 
