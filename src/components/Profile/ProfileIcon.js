@@ -6,7 +6,7 @@ import {
     DropdownItem 
 } from 'reactstrap';
 import './ProfileIcon.css';
-import user from './user.svg';
+import user from './user.png';
 
 
 class ProfileIcon extends React.Component { //inital state of the app
@@ -34,7 +34,8 @@ class ProfileIcon extends React.Component { //inital state of the app
                     >                        
                         <img
                             src={user}
-                            className="br-100 ba h3 w3 dib" alt="avatar" />                        
+                            className="br-100 ba h3 w3 dib" alt="avatar" 
+                        />                        
                     </DropdownToggle>
                     <DropdownMenu 
                         className="b--transparent shadow-5 dropdown-menu-right" 
