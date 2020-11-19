@@ -21,6 +21,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  font-family: Kaushan, sans-serif;
+}
+
 button {
   cursor: pointer;
 }

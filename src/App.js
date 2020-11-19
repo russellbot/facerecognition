@@ -9,6 +9,7 @@ import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm.js';
 import Rank from './components/Rank/Rank.js';
 import Modal from './components/Modal/Modal.js'
 import Profile from './components/Profile/Profile.js'
+import Header from './components/Header/Header.js'
 import './App.css';
 
 // const particlesOptions = {
@@ -199,6 +200,7 @@ class App extends Component {
         }
         { route === 'home' 
           ? <div>
+              <Header />
               <Logo />
               <Rank name={this.state.user.name} entries={this.state.user.entries} />
               <ImageLinkForm 
