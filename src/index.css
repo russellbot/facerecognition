@@ -22,7 +22,9 @@ body {
 }
 
 h1 {
-  font-family: Kaushan, sans-serif;
+  font-family: Kaushan Script, sans-serif;
+  display: flex;
+  font-size: 45px;
 }
 
 button {
