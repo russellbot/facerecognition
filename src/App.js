@@ -188,6 +188,7 @@ class App extends Component {
         /> */}
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}
           toggleModal={this.toggleModal} />
+        <Header />
         { isProfileOpen && 
           <Modal>
             <Profile 
@@ -200,7 +201,6 @@ class App extends Component {
         }
         { route === 'home' 
           ? <div>
-              <Header />
               <Logo />
               <Rank name={this.state.user.name} entries={this.state.user.entries} />
               <ImageLinkForm 
