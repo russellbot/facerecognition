@@ -9,7 +9,6 @@ import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm.js';
 import Rank from './components/Rank/Rank.js';
 import Modal from './components/Modal/Modal.js'
 import Profile from './components/Profile/Profile.js'
-import Header from './components/Header/Header.js'
 import './App.css';
 
 // const particlesOptions = {
@@ -188,7 +187,6 @@ class App extends Component {
         /> */}
         <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}
           toggleModal={this.toggleModal} />
-        <Header />
         { isProfileOpen && 
           <Modal>
             <Profile 
