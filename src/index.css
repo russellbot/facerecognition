@@ -23,8 +23,10 @@ body {
 
 h1 {
   font-family: Kaushan Script, sans-serif;
-  display: flex;
   font-size: 45px;
+  margin-top: 0;
+  flex-grow: 2;
+  text-align: left;
 }
 
 button {
