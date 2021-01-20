@@ -2,46 +2,49 @@ import React from 'react';
 import './Register.css';
 
 class Register extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            email: '',
-            password: '',
-            name: ''
-        }
-    }
+	constructor(props){
+		super(props);
+		this.state= {
+			email: '',
+			password: '',
+			name: ''
+		}
+	}
 
-    onNameChange = (event) => {
-        this.setState({name: event.target.value})
-    }
+	onNameChange = (event) => {
+		this.setState({name: event.target.value})
+	}
 
-    onEmailChange = (event) => {
-        this.setState({email: event.target.value})
-    }
+	onEmailChange = (event) => {
+		this.setState({email: event.target.value})
+	}
 
-    onPasswordChange = (event) => {
-        this.setState({password: event.target.value})
-    }
+	onPasswordChange = (event) => {
+		this.setState({password: event.target.value})
+	}
 
-    onSubmitRegister = () => {
-        fetch('http://localhost:3000/register', {
-            method: 'post',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-                email: this.state.email,
-                password: this.state.password,
-                name: this.state.name
-            })
+	saveAuthTokenInSession = (token) => {
+		window.sessionStorage.setItem('token', token)
+    }
+    
+	onSubmitRegister = () => {
+        fetch('https://protected-bayou-29814.herokuapp.com/register', {
+          method: 'post',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            email: this.state.email,
+            password: this.state.password,
+            name: this.state.name
+          })
         })
-            .then(response => response.json())
-            .then(data => {
-                if (data.user.id && data.token) {
-                    window.sessionStorage.setItem('token', data.token)
-                    this.props.loadUser(data.user)
-                    this.props.onRouteChange('home');
-                }
-            })
-    }
+          .then(response => response.json())
+          .then(user => {
+            if (user.id) {
+              this.props.loadUser(user)
+              this.props.onRouteChange('home');
+            }
+          })
+      }
 
     render() {
         return (
@@ -84,7 +87,7 @@ class Register extends React.Component {
                         <div className="">
                             <input 
                                 onClick={this.onSubmitRegister}
-                                className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" 
+                                className="b ph3 pv2 input-reset ba b--white white bg-transparent grow pointer f6 dib" 
                                 type="submit" 
                                 value="Register" 
                             />

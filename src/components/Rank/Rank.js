@@ -8,23 +8,23 @@ class Rank extends React.Component {
         }
     }
 
-    componentDidMount() {
-        this.generateEmoji(this.props.entries)
-    }
+    // componentDidMount() {
+    //     this.generateEmoji(this.props.entries)
+    // }
 
-    componentDidUpdate(prevProps, prevState) {
-        if (prevProps.entries === this.props.entires && prevProps.name === this.props.name) {
-            return null
-        }
-        this.generateEmoji(this.props.entries);
-    }
+    // componentDidUpdate(prevProps, prevState) {
+    //     if (prevProps.entries === this.props.entires && prevProps.name === this.props.name) {
+    //         return null
+    //     }
+    //     this.generateEmoji(this.props.entries);
+    // }
 
-    generateEmoji = (entries) => {
-        fetch(`https://u9m7ab5740.execute-api.us-east-1.amazonaws.com/prod/rank?rank=${entries}`)
-            .then(response => response.json())
-            .then(data => this.setState({ emoji: data.input }))
-            .catch(console.log)
-    }
+    // generateEmoji = (entries) => {
+    //     fetch(`https://u9m7ab5740.execute-api.us-east-1.amazonaws.com/prod/rank?rank=${entries}`)
+    //         .then(response => response.json())
+    //         .then(data => this.setState({ emoji: data.input }))
+    //         .catch(console.log)
+    // }
 
     render() {
         return (
@@ -35,9 +35,9 @@ class Rank extends React.Component {
                 <div className='white f1'>
                     {this.props.entries}
                 </div>
-                <div className='white f3'>
+                {/* <div className='white f3'>
                     {`Rank Badge: ${this.state.emoji}`}
-                </div>
+                </div> */}
             </div>
         );
     }
