@@ -22,13 +22,13 @@ class Signin extends React.Component {
         window.sessionStorage.setItem('token', token);
     }
 
-    onSubmitSignIn = () => {
+    onSubmitSignIn = (demo) => {
         fetch('https://protected-bayou-29814.herokuapp.com/signin', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
-                email: this.state.signInEmail,
-                password: this.state.signInPassword
+                email: (demo === 'demo') ? 'demo@gmail.com' : this.state.signInEmail,
+                password: (demo === 'demo') ? 'demo' : this.state.signInPassword
             })
         })
             .then(response => response.json())
@@ -92,7 +92,8 @@ class Signin extends React.Component {
                             />
                         </div>
                         <div className="lh-copy mt3">
-                            <p onClick={() => onRouteChange('register')} href="#0" className="f6 link dim black db pointer">Register</p>
+                            <p onClick={() => onRouteChange('register')} href="#0" className="b ph3 pv2 input-reset ba b--white white bg-transparent grow pointer f6 dib mr1">Register</p>
+                            <p onClick={() => this.onSubmitSignIn('demo')} href="#0" className="b ph3 pv2 input-reset ba b--white white bg-transparent grow pointer f6 dib ml1">Demo</p>
                         </div>
                     </div>
                 </main>
