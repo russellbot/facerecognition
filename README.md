@@ -2,11 +2,11 @@
 
 ### Deployed URL:
 
-heroku placeholder
+https://smart-face-react.herokuapp.com/
 
 ### Sample:
 
-placeholder
+![Smart Face App](https://github.com/russellbot/smart-face/blob/master/public/smartface.PNG?raw-true)
 
 ### Description
 
