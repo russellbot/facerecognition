@@ -2,7 +2,7 @@
 
 ### Deployed URL:
 
-https://smart-face-react.herokuapp.com/
+https://russellbot.github.io/smart-face/
 
 ### Sample:
 
