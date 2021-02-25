@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/smart-face/static/css/main.6cafabf8.chunk.css",
+    "main.js": "/smart-face/static/js/main.d6697e24.chunk.js",
+    "main.js.map": "/smart-face/static/js/main.d6697e24.chunk.js.map",
+    "runtime-main.js": "/smart-face/static/js/runtime-main.6ece2f61.js",
+    "runtime-main.js.map": "/smart-face/static/js/runtime-main.6ece2f61.js.map",
+    "static/css/2.cc2d33b2.chunk.css": "/smart-face/static/css/2.cc2d33b2.chunk.css",
+    "static/js/2.15c2a200.chunk.js": "/smart-face/static/js/2.15c2a200.chunk.js",
+    "static/js/2.15c2a200.chunk.js.map": "/smart-face/static/js/2.15c2a200.chunk.js.map",
+    "index.html": "/smart-face/index.html",
+    "precache-manifest.270758c4163e2a658ed8f873da08f4d2.js": "/smart-face/precache-manifest.270758c4163e2a658ed8f873da08f4d2.js",
+    "service-worker.js": "/smart-face/service-worker.js",
+    "static/css/2.cc2d33b2.chunk.css.map": "/smart-face/static/css/2.cc2d33b2.chunk.css.map",
+    "static/css/main.6cafabf8.chunk.css.map": "/smart-face/static/css/main.6cafabf8.chunk.css.map",
+    "static/js/2.15c2a200.chunk.js.LICENSE.txt": "/smart-face/static/js/2.15c2a200.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6ece2f61.js",
+    "static/css/2.cc2d33b2.chunk.css",
+    "static/js/2.15c2a200.chunk.js",
+    "static/css/main.6cafabf8.chunk.css",
+    "static/js/main.d6697e24.chunk.js"
+  ]
+}
